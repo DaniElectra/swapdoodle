@@ -1,13 +1,17 @@
 package utility
 
-import "github.com/PretendoNetwork/swapdoodle/database"
+import (
+	"github.com/PretendoNetwork/swapdoodle/database"
 
-func PasswordFromPID(pid uint32) string {
+	"github.com/PretendoNetwork/nex-go"
+)
+
+func PasswordFromPID(pid uint32) (string, uint32) {
 	user := database.GetNEXAccountByPID(pid)
 
 	if user == nil {
-		return ""
+		return "", nex.Errors.RendezVous.InvalidUsername
 	}
 
-	return user["password"].(string)
+	return user["password"].(string), 0
 }
