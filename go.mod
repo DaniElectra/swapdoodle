@@ -3,8 +3,8 @@ module github.com/PretendoNetwork/swapdoodle
 go 1.19
 
 require (
-	github.com/PretendoNetwork/nex-go v1.0.19
-	github.com/PretendoNetwork/nex-protocols-go v1.0.24
+	github.com/PretendoNetwork/nex-go v1.0.20
+	github.com/PretendoNetwork/nex-protocols-go v1.0.25
 	github.com/PretendoNetwork/plogger-go v1.0.2
 	github.com/joho/godotenv v1.4.0
 	go.mongodb.org/mongo-driver v1.11.1
